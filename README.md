@@ -1,2 +1,2 @@
 # grpcGO
-Learnign basci GRPC in golang
+Learnign basic GRPC in golang
