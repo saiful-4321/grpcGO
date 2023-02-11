@@ -52,3 +52,12 @@ func (s Service) InsertRocket(ctx context.Context, rkt Rocket) (Rocket, error) {
 
 	return rkt, nil
 }
+
+// DeleteRocket - Delete a rocket from the inventory
+func (s Service) DeleteRocket(id string) error {
+	err := s.Store.DeleteRocket(id)
+	if err != nil {
+		return err
+	}
+	return nil
+}
