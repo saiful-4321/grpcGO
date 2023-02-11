@@ -43,7 +43,7 @@ func (s Service) GetRocketByID(ctx context.Context, id string) (Rocket, error) {
 }
 
 // InsertRocket - used to insert a new rocket into the store
-func (s Service) InsertRocket(rkt Rocket) (Rocket, error) {
+func (s Service) InsertRocket(ctx context.Context, rkt Rocket) (Rocket, error) {
 	rkt, err := s.Store.InsertRocket(rkt)
 
 	if err != nil {
